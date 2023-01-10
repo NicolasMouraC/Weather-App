@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700&display=swap');
+
+/*font-family: 'Work Sans', sans-serif;*/
+
+:root {
+  --body-background-color: #00a9fa;
+  --container-background-color: #fffbf4;
+  --card-background-color: #8400ff25;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--body-background-color);
+  width: 100%;
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+hr {
+  border: 0;
+  border-top: 2px dashed rebeccapurple;
+  width: 100%;
+}
+
+.container {
+  background-color: var(--container-background-color);
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  width: 95%;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.card-figure {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.card-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80%;
+}
+
+.flex-collumn {
+  flex-direction: column;
+}
+
+/* -------------- */
+/* Header Css */
+/* -------------- */
+.header {
+  display: flex;
+  height: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 20px 0 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* -------------- */
+/* Main Content Css */
+/* -------------- */
+.main-content-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+/* -------------- */
+/* Today forecast Css */
+/* -------------- */
+
+.today-forecast-card {
+  display: flex;
+  margin: 20px 0;
+}
+
+/* -------------- */
+/* Days Forecast Css */
+/* -------------- */
+.days-forecast-card {
+  display: flex;
+  margin: 20px 0;
+}
+
+.day-forecast-card {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+/* -------------- */
+/* Air Condition Css */
+/* -------------- */
+.air-condition-row {
+  display: flex;
+  justify-content: space-between;
 }
