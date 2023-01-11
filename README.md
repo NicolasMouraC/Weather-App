@@ -1,6 +1,6 @@
-# Reddit Minimal
-React app that uses Reddit API to display posts and interacts with real Reddit.
-[See this project online](https://nicolasmourac.github.io/Reddit-Clone/)
+# Weather App
+React app that uses...
+[See this project online](https://nicolasmourac.github.io/Weather-App/)
 
 ### 🛠️ Build with
 * [React](https://reactjs.org) - Framework used
