@@ -67,7 +67,7 @@ hr {
   width: 80%;
 }
 
-.card-info > .city {
+.card-info > .info {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -76,24 +76,6 @@ hr {
   font-weight: 500;
 }
 
-.card-info > .cloudliness {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
-
-.card-info > .temp {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 22px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  margin-top: 10px;
-}
 
 .flex-collumn {
   flex-direction: column;
