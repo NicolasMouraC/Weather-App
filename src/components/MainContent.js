@@ -15,7 +15,7 @@ const MainContent = () => {
         async function setData() {
             dispatch(toggleIsLoaded)
             const data = await getCurrentWeather("São Paulo");
-            dispatch(setCurrentWeather({currentWeather: data}))
+            dispatch(setCurrentWeather({currentWeather: data}));
         }
 
         setData()
@@ -32,9 +32,10 @@ const MainContent = () => {
                     {isLoaded ? <img src={`http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`} alt="Weather Icon"/> : "Weather Figure"}
                 </div>
                 <div className="card-info">
-                    <div className="city"><SlLocationPin color="#00a9fa"/> {isLoaded ? currentWeather.name : "Current city" }</div>
-                    <div className="cloudliness"><BsCloudsFill color="#00a9fa"/> {isLoaded ? `Cloudliness: ${currentWeather.clouds.all}%` : "Current cloudliness"}</div>
-                    <div className="temp"><FaTemperatureHigh color="#00a9fa"/>{isLoaded ? `${Math.trunc(currentWeather.main.temp)}º` : "Current temp"}</div>
+                    <div className="info"><SlLocationPin color="#00a9fa"/> {isLoaded ? currentWeather.name : "Current city" }</div>
+                    <div className="info"><FaTemperatureHigh color="#00a9fa"/>{isLoaded ? `${Math.trunc(currentWeather.main.temp)}º` : "Current temp"}</div>
+                    <div className="info"><BsCloudsFill color="#00a9fa"/> {isLoaded ? `Cloudliness: ${currentWeather.clouds.all}%` : "Current cloudliness"}</div>
+                    
                 </div>
             </div>
         </div>
