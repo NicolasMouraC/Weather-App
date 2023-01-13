@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTodayWeather, selectIsTodayWeatherLoaded, toggleIsLoaded, setTodayWeather } from "../slices/todayWeatherSlice";
 import { getTodayWeather } from "../api/Api.js";
+import { FaTemperatureHigh } from 'react-icons/fa';
+import { CiClock1 } from 'react-icons/ci';
+import { BsFillCloudRainFill } from 'react-icons/bs';
+import { WiHumidity } from 'react-icons/wi';
 
 const TodayForecast = () => {
     const dispatch = useDispatch();
@@ -33,10 +37,10 @@ const TodayForecast = () => {
                                     <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`}/>
                                 </div>
                                 <div className="card-info">
-                                    <div className="info">{Math.trunc(el.main.temp)}º</div>
-                                    <div className="info">{el.main.humidity}</div>
-                                    <div className="info">{(el.pop * 100)}%</div>
-                                    <div className="info">{el.dt_txt}</div>
+                                    <div className="info"><FaTemperatureHigh color="#00a9fa"/> {Math.trunc(el.main.temp)}º</div>
+                                    <div className="info"><WiHumidity color="#00a9fa"/> {el.main.humidity}%</div>
+                                    <div className="info"><BsFillCloudRainFill color="#00a9fa"/> {Math.trunc(el.pop * 100)}%</div>
+                                    <div className="info"><CiClock1 color="#00a9fa"/> {el.dt_txt}</div>
                                 </div>
                             </div>
                             <hr/>
@@ -53,7 +57,10 @@ const TodayForecast = () => {
                         <hr/>
                     </div>
             }
-                
+
+            <div className="icon-description">
+            
+            </div>   
 
             </div>
         </div>
