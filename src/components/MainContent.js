@@ -21,8 +21,6 @@ const MainContent = () => {
         setData()
     }, [])
 
-    console.log(currentWeather)
-
     return (
         <div className="card">
             <div className="card-title">Current Weather</div>
