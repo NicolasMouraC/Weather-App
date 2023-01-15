@@ -12,7 +12,7 @@ const daysWeatherSlice = createSlice({
                 state.isDaysWeatherLoaded = (!state.isDaysWeatherLoaded);
             }
         },
-        getDaysWeather: (state, action) => {
+        setDaysWeather: (state, action) => {
             state.daysWeather = action.payload.daysWeather;
             state.isDaysWeatherLoaded = true;
         }
@@ -21,5 +21,5 @@ const daysWeatherSlice = createSlice({
 
 export const selectDaysWeather = (state) => state.daysWeather.daysWeather;
 export const selectIsDaysWeatherLoaded = (state) => state.daysWeather.isDaysWeatherLoaded;
-export const { getDaysWeather } = daysWeatherSlice.actions
+export const { setDaysWeather, toggleIsLoaded } = daysWeatherSlice.actions
 export default daysWeatherSlice.reducer;

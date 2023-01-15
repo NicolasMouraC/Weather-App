@@ -29,7 +29,6 @@ const TodayForecast = () => {
             <div className="card-content flex-collumn">
 
                 {isLoaded ? todayWeather.list.map(el => {
-
                     return (
                         <div>
                             <div className="today-forecast-card">
