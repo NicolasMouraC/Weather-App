@@ -47,16 +47,34 @@ const TodayForecast = () => {
                             <hr/>
                         </div>
                     )
-                }) : <div className="today-forecast-card">
-                        <div className="card-figure">
-                            Figure
-                        </div>
-                        <div className="card-info">
-                            <div>Temp</div>
-                            <div>Hour</div>
+                }) : 
+                    <div>
+                        <div className="today-forecast-card">
+                            <div className="card-figure">
+                                <div className="skeleton skeleton-image"></div>
+                            </div>
+                            <div className="card-info">
+                                <div className="info">
+                                    <FaTemperatureHigh color="#00a9fa"/>
+                                    <span className="skeleton skeleton-text_icon"></span>
+                                </div>
+                                <div className="info">
+                                    <WiHumidity color="#00a9fa"/>
+                                    <span className="skeleton skeleton-text_icon"></span>
+                                </div>
+                                <div className="info">
+                                    <BsFillCloudLightningRainFill color="#00a9fa"/>
+                                    <span className="skeleton skeleton-text_icon"></span>
+                                </div>
+                                <div className="info">
+                                    <BsClock color="#00a9fa"/>
+                                    <span className="skeleton skeleton-text_icon"></span>
+                                </div>
+                            </div>
                         </div>
                         <hr/>
                     </div>
+                    
             }
             <div className="icon-description">
             
