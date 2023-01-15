@@ -10,7 +10,7 @@ const extractJsonData = async (url) => {
 const getLatitudeAndLongitude = async (cityName) => {
     const encodedCityName = encodeURI(cityName);
 
-    const data = await extractJsonData(`http://api.openweathermap.org/geo/1.0/direct?q=${encodedCityName}&limit=1&appid=${OPEN_WEATHER_API_KEY}`)
+    const data = await extractJsonData(`https://api.openweathermap.org/geo/1.0/direct?q=${encodedCityName}&limit=1&appid=${OPEN_WEATHER_API_KEY}`)
     const { lat, lon } = data[0];
     return { lat, lon }
 }
