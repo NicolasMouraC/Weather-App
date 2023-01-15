@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectTodayWeather, selectIsTodayWeatherLoaded, toggleIsLoaded, setTodayWeather } from "../slices/todayWeatherSlice";
 import { getTodayWeather } from "../api/Api.js";
+import { WiHumidity } from 'react-icons/wi';
+import { FaTemperatureHigh } from 'react-icons/fa';
+import { BsFillCloudLightningRainFill } from 'react-icons/bs';
+import { BsClock } from 'react-icons/bs';
+
 
 const TodayForecast = () => {
     const dispatch = useDispatch();
@@ -33,10 +38,11 @@ const TodayForecast = () => {
                                     <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`}/>
                                 </div>
                                 <div className="card-info">
-                                    <div className="info">{Math.trunc(el.main.temp)}º</div>
-                                    <div className="info">{el.main.humidity}</div>
-                                    <div className="info">{(el.pop * 100)}%</div>
-                                    <div className="info">{el.dt_txt}</div>
+                                    <div className="info"><FaTemperatureHigh color="#00a9fa"/> {Math.trunc(el.main.temp)}º</div>
+                                    <div className="info"><WiHumidity color="#00a9fa"/> {Math.trunc(el.main.humidity)}%</div>
+                                    <div className="info"><BsFillCloudLightningRainFill color="#00a9fa"/> {Math.trunc(el.pop * 100)}%</div>
+                                    <div className="info"><BsClock color="#00a9fa"/> {el.dt_txt}</div>
+
                                 </div>
                             </div>
                             <hr/>
@@ -53,7 +59,10 @@ const TodayForecast = () => {
                         <hr/>
                     </div>
             }
-                
+            <div className="icon-description">
+            
+            </div>   
+
 
             </div>
         </div>
