@@ -33,9 +33,8 @@ const MainContent = () => {
                 </div>
                 <div className="card-info">
                     <div className="info"><SlLocationPin color="#00a9fa"/> {isLoaded ? currentWeather.name : "Current city" }</div>
-                    <div className="info"><FaTemperatureHigh color="#00a9fa"/>{isLoaded ? `${Math.trunc(currentWeather.main.temp)}º` : "Current temp"}</div>
                     <div className="info"><BsCloudsFill color="#00a9fa"/> {isLoaded ? `Cloudliness: ${currentWeather.clouds.all}%` : "Current cloudliness"}</div>
-                    
+                    <div className="info"><FaTemperatureHigh color="#00a9fa"/>{isLoaded ? `${Math.trunc(currentWeather.main.temp)}º` : "Current temp"}</div>
                 </div>
             </div>
         </div>
