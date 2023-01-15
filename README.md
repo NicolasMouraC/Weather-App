@@ -26,6 +26,8 @@ Finally, type:
 To initiallize the server on localhost.
 
 ### 📌 Version changes
+* 0.3.0 - 24 hour weather section now has API real data
+* 0.2.0 - Current weather section now has API real data
 * 0.1.1 - Logo and search bar stylized
 * 0.1.0 - Page sketch
 
