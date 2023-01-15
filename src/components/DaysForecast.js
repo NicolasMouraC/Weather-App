@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { getDaysWeather } from "../api/Api";
 import { selectDaysWeather, selectIsDaysWeatherLoaded, setDaysWeather, toggleIsLoaded } from "../slices/daysWeatherSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { FaTemperatureLow, FaTemperatureHigh } from 'react-icons/fa';
 
 const DaysForecast = () => {
     const dispatch = useDispatch();
@@ -23,19 +24,22 @@ const DaysForecast = () => {
             <h1>7 Day Forecast</h1>
             <div className="card-content flex-collumn">
                 {isLoaded ? daysWeather.forecast.forecastday.map(el => {
-                    console.log(el)
                     return (
                         <div>
                             <div className="day-forecast-card">
-                                <div>
+                                <div className="info">
                                     {el.date}
                                 </div>
-                                <div>
-                                    <div>{el.day.condition.icon}</div>
-                                    <div>{el.day.condition.text}</div>
+                                <div className="card-figure">
+                                    <div className="icon">
+                                        <img src={`https:${el.day.condition.icon}`} className='icon-img'/>
+                                        <div>{el.day.condition.text}</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    Temp/Temp
+                                <div className="card-info">
+                                    <div className="info">
+                                        <FaTemperatureLow/> {el.day.mintemp_c}º / <FaTemperatureHigh/> {el.day.maxtemp_c}º
+                                    </div>
                                 </div>
                             </div>
 

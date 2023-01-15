@@ -1,4 +1,4 @@
-const OPEN_WEATHER_API_KEY = "bc2ba0e080b31964d13a61ca447347e9";
+const OPEN_WEATHER_API_KEY = "e2bb8761dc04bbe93ab02ec33b8049e8";
 const WEATHER_API_KEY = "d9b23100090f4317a35185021231301"
 
 const extractJsonData = async (url) => {
@@ -46,7 +46,7 @@ export const getTodayWeather = async (cityName) => {
 export const getDaysWeather = async (cityName) => {
     const { lat, lon } = await getLatitudeAndLongitude(cityName);
 
-    const data = await extractJsonData(`http://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${lat},${lon}&days=7`)
+    const data = await extractJsonData(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=${lat},${lon}&days=7`)
 
     // forecast.forecastday.map()
     // date = date
