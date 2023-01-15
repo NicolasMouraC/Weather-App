@@ -7,6 +7,7 @@ import { FaTemperatureHigh } from 'react-icons/fa';
 import { BsFillCloudLightningRainFill } from 'react-icons/bs';
 import { BsClock } from 'react-icons/bs';
 
+
 const TodayForecast = () => {
     const dispatch = useDispatch();
     const isLoaded = useSelector(selectIsTodayWeatherLoaded);
@@ -41,6 +42,7 @@ const TodayForecast = () => {
                                     <div className="info"><WiHumidity color="#00a9fa"/> {Math.trunc(el.main.humidity)}%</div>
                                     <div className="info"><BsFillCloudLightningRainFill color="#00a9fa"/> {Math.trunc(el.pop * 100)}%</div>
                                     <div className="info"><BsClock color="#00a9fa"/> {el.dt_txt}</div>
+
                                 </div>
                             </div>
                             <hr/>
@@ -57,7 +59,10 @@ const TodayForecast = () => {
                         <hr/>
                     </div>
             }
-                
+            <div className="icon-description">
+            
+            </div>   
+
 
             </div>
         </div>
