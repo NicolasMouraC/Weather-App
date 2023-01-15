@@ -21,7 +21,7 @@ const DaysForecast = () => {
 
     return (
         <div className="card">
-            <h1>7 Day Forecast</h1>
+            <div className="card-title">7 Days Forecast</div>
             <div className="card-content flex-collumn">
                 {isLoaded ? daysWeather.forecast.forecastday.map(el => {
                     return (
@@ -38,7 +38,7 @@ const DaysForecast = () => {
                                 </div>
                                 <div className="card-info">
                                     <div className="info">
-                                        <FaTemperatureLow/> {el.day.mintemp_c}º / <FaTemperatureHigh/> {el.day.maxtemp_c}º
+                                        <FaTemperatureLow color="#00a9fa"/> {el.day.mintemp_c}º / <FaTemperatureHigh color="#00a9fa"/> {el.day.maxtemp_c}º
                                     </div>
                                 </div>
                             </div>
@@ -48,15 +48,17 @@ const DaysForecast = () => {
                     )  
                 }): <div>
                     <div className="day-forecast-card">
-                        <div>
-                            Today
+                        <div className="info">
+                            <div className="skeleton skeleton-text"></div>
                         </div>
-                        <div>
-                            <div>Figure</div>
-                            <div>Weater</div>
+                        <div className="card-figure">
+                            <div className="skeleton skeleton-image"></div>
+                            <div className="skeleton skeleton-text"></div>
                         </div>
-                        <div>
-                            Temp/Temp
+                        <div className="card-info">
+                            <div className="info">
+                                <FaTemperatureLow color="#00a9fa"/> <span className="skeleton skeleton-text_icon"></span> / <FaTemperatureHigh color="#00a9fa"/> <span className="skeleton skeleton-text_icon"></span>
+                            </div>
                         </div>
                     </div>
 
