@@ -12,7 +12,7 @@ const airConditionSlice = createSlice({
                 state.isAirConditionLoaded = (!state.isAirConditionLoaded);
             }
         },
-        getAirCondition: (state, action) => {
+        setAirCondition: (state, action) => {
             state.airCondition = action.payload.airCondition;
             state.isAirConditionLoaded = true;
         }
@@ -21,5 +21,5 @@ const airConditionSlice = createSlice({
 
 export const selectAirCondition = (state) => state.airCondition.airCondition;
 export const selectIsAirConditionLoaded = (state) => state.airCondition.isAirConditionLoaded;
-export const { toggleIsLoaded, getAirCondition } = airConditionSlice.reducer;
+export const { toggleIsLoaded, setAirCondition } = airConditionSlice.actions;
 export default airConditionSlice.reducer
