@@ -1,25 +1,13 @@
-import React, { useEffect } from "react";
-import { selectCurrentWeather, selectIsCurrentWeatherLoaded, setCurrentWeather, toggleIsLoaded } from "../slices/currentWeatherSlice";
-import { useSelector, useDispatch } from 'react-redux'
-import { getCurrentWeather } from "../api/Api.js";
+import React from "react";
+import { selectCurrentWeather, selectIsCurrentWeatherLoaded } from "../slices/currentWeatherSlice";
+import { useSelector } from 'react-redux';
 import { BsCloudsFill } from 'react-icons/bs';
 import { SlLocationPin } from 'react-icons/sl';
 import { FaTemperatureHigh } from 'react-icons/fa';
 
 const MainContent = () => {
-    const dispatch = useDispatch();
     const isLoaded = useSelector(selectIsCurrentWeatherLoaded);
     const currentWeather = useSelector(selectCurrentWeather);
-
-    useEffect(() => {
-        async function setData() {
-            dispatch(toggleIsLoaded)
-            const data = await getCurrentWeather("São Paulo");
-            dispatch(setCurrentWeather({currentWeather: data}));
-        }
-
-        setData()
-    }, [])
 
     return (
         <div className="card">

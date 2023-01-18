@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { selectTodayWeather, selectIsTodayWeatherLoaded, toggleIsLoaded, setTodayWeather } from "../slices/todayWeatherSlice";
-import { getTodayWeather } from "../api/Api.js";
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectTodayWeather, selectIsTodayWeatherLoaded } from "../slices/todayWeatherSlice";
 import { WiHumidity } from 'react-icons/wi';
 import { FaTemperatureHigh } from 'react-icons/fa';
 import { BsFillCloudLightningRainFill } from 'react-icons/bs';
@@ -9,32 +8,21 @@ import { BsClock } from 'react-icons/bs';
 
 
 const TodayForecast = () => {
-    const dispatch = useDispatch();
     const isLoaded = useSelector(selectIsTodayWeatherLoaded);
     const todayWeather = useSelector(selectTodayWeather);
-
-    useEffect(() => {
-        async function setData() {
-            dispatch(toggleIsLoaded);
-            const data = await getTodayWeather("São Paulo");
-            dispatch(setTodayWeather({todayWeather: data}));
-        }
-
-        setData()
-    })
 
     return (
         <div className="card">
             <div className="card-title">Today Forecast</div>
             <div className="card-content flex-collumn">
 
-                {isLoaded ? todayWeather.list.map(el => {
+                {isLoaded ? todayWeather.list.map((el, idx) => {
                     return (
-                        <div>
+                        <div key={idx}>
                             <div className="today-forecast-card">
                                 <div className="card-figure">
                                     {el.weather[0].description}
-                                    <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`}/>
+                                    <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`} alt={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`}/>
                                 </div>
                                 <div className="card-info">
                                     <div className="info"><FaTemperatureHigh color="#00a9fa"/> {Math.trunc(el.main.temp)}º</div>

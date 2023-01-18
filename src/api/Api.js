@@ -1,4 +1,4 @@
-const OPEN_WEATHER_API_KEY = "e2bb8761dc04bbe93ab02ec33b8049e8";
+const OPEN_WEATHER_API_KEY = "3b26e5ea8067a3c819afadcfb7040620";
 const WEATHER_API_KEY = "d9b23100090f4317a35185021231301"
 
 const extractJsonData = async (url) => {
