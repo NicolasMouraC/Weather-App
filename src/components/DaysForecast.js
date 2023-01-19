@@ -26,7 +26,7 @@ const DaysForecast = () => {
                                 </div>
                                 <div className="card-info">
                                     <div className="info">
-                                        <FaTemperatureLow color="#00a9fa"/> {el.day.mintemp_c}º / <FaTemperatureHigh color="#00a9fa"/> {el.day.maxtemp_c}º
+                                        <FaTemperatureLow color="#00a9fa"/> {el.day.mintemp_c}° / <FaTemperatureHigh color="#00a9fa"/> {el.day.maxtemp_c}°
                                     </div>
                                 </div>
                             </div>

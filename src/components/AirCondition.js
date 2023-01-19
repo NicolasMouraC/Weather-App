@@ -12,24 +12,24 @@ const AirCondition = () => {
             {isLoaded ?
                 <div className="card-container flex-collumn">
                     <div className="air-condition-row">
-                        <div>
+                        <div className="card-info">
                             <h3>😃 Real feel</h3>
-                            <p>{airCondition.current.feelslike_c}</p>
+                            <p className="info">{airCondition.current.feelslike_c}°</p>
                         </div>
-                        <div>
+                        <div className="card-info">
                             <h3>🥶 Wind</h3>
-                            <p>{airCondition.current.wind_kph}</p>
+                            <p className="info text-end">{airCondition.current.wind_kph} KPH</p>
                         </div>
                     </div>
 
                     <div className="air-condition-row">
-                        <div>
+                        <div className="card-info">
                             <h3>😭 Rain chance</h3>
-                            <p>{airCondition.current.precip_mm}</p>
+                            <p className="info">{airCondition.current.precip_mm} %</p>
                         </div>
-                        <div>
+                        <div className="card-info">
                             <h3>🥵 UV index</h3>
-                            <p>{airCondition.current.uv}</p>
+                            <p className="info text-end">{airCondition.current.uv} out of 10</p>
                         </div>
                     </div>
                 </div>
