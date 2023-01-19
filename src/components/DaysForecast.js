@@ -26,7 +26,7 @@ const DaysForecast = () => {
                                 </div>
                                 <div className="card-info">
                                     <div className="info">
-                                        <FaTemperatureLow color="#00a9fa"/> {el.day.mintemp_c}º / <FaTemperatureHigh color="#00a9fa"/> {el.day.maxtemp_c}º
+                                        <FaTemperatureLow color="#00a9fa"/> {el.day.mintemp_c}° / <FaTemperatureHigh color="#00a9fa"/> {el.day.maxtemp_c}°
                                     </div>
                                 </div>
                             </div>
@@ -35,23 +35,23 @@ const DaysForecast = () => {
                         </div>
                     )  
                 }): <div>
-                    <div className="day-forecast-card">
-                        <div className="info">
-                            <div className="skeleton skeleton-text"></div>
-                        </div>
-                        <div className="card-figure">
-                            <div className="skeleton skeleton-image"></div>
-                            <div className="skeleton skeleton-text"></div>
-                        </div>
-                        <div className="card-info">
+                        <div className="day-forecast-card">
                             <div className="info">
-                                <FaTemperatureLow color="#00a9fa"/> <span className="skeleton skeleton-text_icon"></span> / <FaTemperatureHigh color="#00a9fa"/> <span className="skeleton skeleton-text_icon"></span>
+                                <div className="skeleton skeleton-text"></div>
+                            </div>
+                            <div className="card-figure">
+                                <div className="skeleton skeleton-image"></div>
+                                <div className="skeleton skeleton-text"></div>
+                            </div>
+                            <div className="card-info">
+                                <div className="info">
+                                    <FaTemperatureLow color="#00a9fa"/> <span className="skeleton skeleton-text_icon"></span> / <FaTemperatureHigh color="#00a9fa"/> <span className="skeleton skeleton-text_icon"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <hr/>
-                </div>    
+                        <hr/>
+                    </div>    
                 }
             </div>
         </div>

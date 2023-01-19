@@ -15,6 +15,7 @@ const getLatitudeAndLongitude = async (cityName) => {
     const { lat, lon } = data[0];
     return { lat, lon }
 }
+
 export const getCurrentWeather = async (cityName) => {
     const { lat, lon } = await getLatitudeAndLongitude(cityName);
 
@@ -54,6 +55,21 @@ export const getDaysWeather = async (cityName) => {
     // maxTemp = day.maxtemp_c
     // weatherDescription = day.condition.text
     // weatherIMG = day.condition.icon
+
+    return data;
+}
+
+
+export const getAirCondition = async (cityName) => {
+    const { lat, lon } = await getLatitudeAndLongitude(cityName);
+
+    const data = await extractJsonData(`https://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${lat},${lon}`);
+
+    // current.map()
+    // fellsLikeTemp = feelslike_c
+    // CurrentWind = wind_kph
+    // PrecipitationMilimeters = precip_mm
+    // uvIndex = uv
 
     return data;
 }

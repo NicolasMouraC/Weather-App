@@ -20,8 +20,7 @@ const MainContent = () => {
                         </div>
                         <div className="card-info">
                             <div className="info"><SlLocationPin color="#00a9fa"/> {currentWeather.name}</div>
-                            <div className="info"><BsCloudsFill color="#00a9fa"/> {`Cloudliness: ${currentWeather.clouds.all}%`}</div>
-                            <div className="info"><FaTemperatureHigh color="#00a9fa"/>{Math.trunc(currentWeather.main.temp)}</div>
+                            <div className="info"><FaTemperatureHigh color="#00a9fa"/>{Math.trunc(currentWeather.main.temp)}°</div>
                         </div>
                     </div>
                         : 

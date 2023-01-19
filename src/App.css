@@ -194,6 +194,10 @@ hr {
   justify-content: space-between;
 }
 
+.text-end {
+  text-align: end;
+}
+
 /* -------------- */
 /* Skeleton Css */
 /* -------------- */

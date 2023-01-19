@@ -2,10 +2,11 @@ import logo from './images/weather-app.png'
 import React, { useRef } from "react";
 import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
 import { useDispatch } from 'react-redux';
-import { getCurrentWeather, getDaysWeather, getTodayWeather } from '../api/Api.js';
+import { getCurrentWeather, getDaysWeather, getTodayWeather, getAirCondition } from '../api/Api.js';
 import { setDaysWeather, toggleIsLoaded as daysWeatherLoaded } from "../slices/daysWeatherSlice.js";
 import { setCurrentWeather, toggleIsLoaded as currentWeatherLoaded } from "../slices/currentWeatherSlice.js";
 import { setTodayWeather, toggleIsLoaded as todayWeatherLoaded } from '../slices/todayWeatherSlice.js';
+import { setAirCondition, toggleIsLoaded as airConditionLoaded } from '../slices/airConditionSlice.js';
 
 const SearchBar = () => {
     const inputRef = useRef(null);
@@ -17,6 +18,7 @@ const SearchBar = () => {
         dispatch(currentWeatherLoaded);
         dispatch(daysWeatherLoaded);
         dispatch(todayWeatherLoaded);
+        dispatch(airConditionLoaded);
 
         const currentWeatherData = await getCurrentWeather(searchTerm);
         dispatch(setCurrentWeather({currentWeather: currentWeatherData}));
@@ -26,6 +28,9 @@ const SearchBar = () => {
 
         const todayWeatherData = await getTodayWeather(searchTerm);
         dispatch(setTodayWeather({todayWeather: todayWeatherData}));
+
+        const airConditionData = await getAirCondition(searchTerm);
+        dispatch(setAirCondition({airCondition: airConditionData}))
     }
 
     return (

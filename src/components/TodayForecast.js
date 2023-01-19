@@ -25,7 +25,7 @@ const TodayForecast = () => {
                                     <img src={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`} alt={`http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`}/>
                                 </div>
                                 <div className="card-info">
-                                    <div className="info"><FaTemperatureHigh color="#00a9fa"/> {Math.trunc(el.main.temp)}º</div>
+                                    <div className="info"><FaTemperatureHigh color="#00a9fa"/> {Math.trunc(el.main.temp)}°</div>
                                     <div className="info"><WiHumidity color="#00a9fa"/> {Math.trunc(el.main.humidity)}%</div>
                                     <div className="info"><BsFillCloudLightningRainFill color="#00a9fa"/> {Math.trunc(el.pop * 100)}%</div>
                                     <div className="info"><BsClock color="#00a9fa"/> {el.dt_txt}</div>
