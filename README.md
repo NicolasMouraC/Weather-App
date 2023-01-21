@@ -7,6 +7,8 @@ React app that displays weather information based on users search.
 * [React Icons](https://react-icons.github.io/react-icons) - Icons used
 * [NPM](https://www.npmjs.com) - Dependency manager
 * [Jest](https://jestjs.io/pt-BR/) - Test library
+* [Open Weather](https://openweathermap.org/api) - APi used for weather data
+* [Weather API](https://www.weatherapi.com/) - API used for weather data
 
 ### 🔧 Run Locally
 On your terminal, first type:
