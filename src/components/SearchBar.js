@@ -34,7 +34,7 @@ const SearchBar = () => {
     }
 
     return (
-        <div className="header">
+        <div className="header search-container">
             <div className="logo">
                 <img 
                     src={logo}

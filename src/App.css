@@ -233,3 +233,37 @@ hr {
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
 }
+
+/* -------------- */
+/* Responsive Css */
+/* -------------- */
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas: "search search search"
+                          "main main today"
+                          "days days today"
+                          "air air today ";
+  }
+  
+  .search-container {
+    grid-area: search;
+  }
+  
+  .main-container {
+    grid-area: main;
+  }
+
+  .today-container {
+    grid-area: today;
+  }
+
+  .days-container {
+    grid-area: days;
+  }
+
+  .air-container {
+    grid-area: air;
+  }
+}

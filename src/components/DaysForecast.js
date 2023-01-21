@@ -8,13 +8,13 @@ const DaysForecast = () => {
     const daysWeather = useSelector(selectDaysWeather);
 
     return (
-        <div className="card">
+        <div className="card days-container">
             <div className="card-title">7 Days Forecast</div>
             <div className="card-content flex-collumn">
                 {isLoaded ? daysWeather.forecast.forecastday.map((el, idx) => {
                     return (
                         <div key={idx}>
-                            <div className="day-forecast-card">
+                            <div className="days-forecast-card">
                                 <div className="info">
                                     {el.date}
                                 </div>

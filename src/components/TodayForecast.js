@@ -12,7 +12,7 @@ const TodayForecast = () => {
     const todayWeather = useSelector(selectTodayWeather);
 
     return (
-        <div className="card">
+        <div className="card today-container">
             <div className="card-title">Today Forecast</div>
             <div className="card-content flex-collumn">
 
