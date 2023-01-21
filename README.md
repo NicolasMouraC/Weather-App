@@ -5,6 +5,7 @@ React app that displays weather information based on users search.
 ### 🛠️ Build with
 * [React](https://reactjs.org) - Framework used
 * [React Icons](https://react-icons.github.io/react-icons) - Icons used
+* [React-Redux](https://react-redux.js.org/) - State manager
 * [NPM](https://www.npmjs.com) - Dependency manager
 * [Jest](https://jestjs.io/pt-BR/) - Test library
 * [Open Weather](https://openweathermap.org/api) - APi used for weather data
