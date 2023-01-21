@@ -10,7 +10,7 @@ const MainContent = () => {
     const currentWeather = useSelector(selectCurrentWeather);
 
     return (
-        <div className="card">
+        <div className="card main-container">
             <div className="card-title">Current Weather</div>
                 {isLoaded ? 
                     <div className="card-content">

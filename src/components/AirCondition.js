@@ -7,7 +7,7 @@ const AirCondition = () => {
     const airCondition = useSelector(selectAirCondition);
 
     return (
-        <div className="card">
+        <div className="card air-container">
             <div className="card-title">Air Condition</div>
             {isLoaded ?
                 <div className="card-container flex-collumn">
@@ -25,7 +25,7 @@ const AirCondition = () => {
                     <div className="air-condition-row">
                         <div className="card-info">
                             <h3>😭 Rain chance</h3>
-                            <p className="info">{airCondition.current.precip_mm} %</p>
+                            <p className="info">{airCondition.current.precip_mm}%</p>
                         </div>
                         <div className="card-info">
                             <h3>🥵 UV index</h3>
