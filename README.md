@@ -26,6 +26,7 @@ Finally, type:
 To initiallize the server on localhost.
 
 ### 📌 Version changes
+* 1.0.0 - App finished, working as expected
 * 0.6.1 - Air condition section now has real API data
 * 0.5.2 - Add skeleton animation on data loading
 * 0.5.1 - Stylized some components
